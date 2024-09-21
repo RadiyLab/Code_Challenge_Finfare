@@ -16,7 +16,6 @@ from selenium.webdriver.common.by import By
 class GoogleFinancePage(BasePage):
     def __init__(self, driver):
         super().__init__(driver)
-        # Update this XPath according to the actual HTML structure of the page
         self.interested_section_xpath = "//div[contains(@class, 'COaKTb')]//span"
 
     def get_stock_symbols(self):

@@ -1,0 +1,38 @@
+name: Manual Tests
+
+on:
+  workflow_dispatch:
+    inputs:
+      run_type:
+        description: 'Select the type of tests to run'
+        required: true
+        default: 'full'
+        options:
+          - full
+          - specific
+
+jobs:
+  run-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run tests
+        run: |
+          if [ "${{ github.event.inputs.run_type }}" == "full" ]; then
+            pytest tests --disable-warnings
+          else
+            pytest tests/test_google_finance.py::ttest_print_symbols_not_in_ui
+            pytest tests/test_google_finance.py::testest_print_symbols_in_ui
+          fi

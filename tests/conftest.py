@@ -3,7 +3,7 @@ import pytest
 from selenium import webdriver
 from datetime import datetime
 from logs.logger import logger
-import configs.config as config  # Corrected import
+import configs.config as config
 
 
 # def pytest_addoption(parser):
@@ -17,7 +17,6 @@ def driver(request):
         'PYTEST_CURRENT_TEST').split(':')[-1].split(' ')[0]
     logger.info(f'########## Test Case: {test_name} ##########')
 
-    # Only Chrome is supported, so default to it
     driver = webdriver.Firefox()
     logger.info('Opened Firefox Browser')
 
@@ -28,7 +27,6 @@ def driver(request):
 
     yield driver
 
-    # Capture screenshot after the test case completes
     timestamp = datetime.now().strftime('%m%d%y_%H%M%S')
     screenshot_name = f".\\evidence\\{test_name}_{timestamp}.png"
     driver.save_screenshot(screenshot_name)

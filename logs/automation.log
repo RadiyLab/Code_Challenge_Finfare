@@ -1,0 +1,43 @@
+09/21/2024 11:58:06 AM ########## Test Case: test_open_page_and_verify_title[test_data0] ##########
+09/21/2024 11:58:12 AM Opened Firefox Browser
+09/21/2024 11:58:14 AM Navigated to https://www.google.com/finance
+09/21/2024 11:58:15 AM Test started: Open page and verify title
+09/21/2024 11:58:16 AM Page title verified successfully.
+09/21/2024 11:58:16 AM Screenshot saved: .\evidence\test_open_page_and_verify_title[test_data0]_092124_115816.png
+09/21/2024 11:58:19 AM Browser was closed successfully
+09/21/2024 11:58:23 AM ########## Test Case: test_compare_stock_symbols[test_data0] ##########
+09/21/2024 11:58:28 AM Opened Firefox Browser
+09/21/2024 11:58:30 AM Navigated to https://www.google.com/finance
+09/21/2024 11:58:31 AM Test started: Compare stock symbols
+09/21/2024 11:58:41 AM Stock symbols retrieved from UI: []
+09/21/2024 11:58:41 AM Symbols in UI but not in test data: []
+09/21/2024 11:58:41 AM Symbols in test data but not in UI: ['NFLX', 'MSFT', 'TSLA']
+09/21/2024 11:58:41 AM Screenshot saved: .\evidence\test_compare_stock_symbols[test_data0]_092124_115841.png
+09/21/2024 11:58:43 AM Browser was closed successfully
+09/21/2024 11:58:43 AM ########## Test Case: test_print_symbols_not_in_ui[test_data0] ##########
+09/21/2024 11:58:49 AM Opened Firefox Browser
+09/21/2024 11:58:51 AM Navigated to https://www.google.com/finance
+09/21/2024 11:58:51 AM Test started: Print symbols in test data but not in UI
+09/21/2024 11:59:01 AM Symbols in test data but not in UI: ['NFLX', 'MSFT', 'TSLA']
+09/21/2024 11:59:01 AM Screenshot saved: .\evidence\test_print_symbols_not_in_ui[test_data0]_092124_115901.png
+09/21/2024 11:59:04 AM Browser was closed successfully
+09/21/2024 11:59:08 AM ########## Test Case: test_print_symbols_in_ui[test_data0] ##########
+09/21/2024 11:59:14 AM Opened Firefox Browser
+09/21/2024 11:59:16 AM Navigated to https://www.google.com/finance
+09/21/2024 11:59:16 AM Test started: Print symbols in UI
+09/21/2024 11:59:26 AM Symbols in UI: []
+09/21/2024 11:59:26 AM Screenshot saved: .\evidence\test_print_symbols_in_ui[test_data0]_092124_115926.png
+09/21/2024 11:59:29 AM Browser was closed successfully
+09/21/2024 11:59:33 AM ########## Test Case: test_ui_symbol_count[test_data0] ##########
+09/21/2024 11:59:38 AM Opened Firefox Browser
+09/21/2024 11:59:40 AM Navigated to https://www.google.com/finance
+09/21/2024 11:59:41 AM Test started: Verify count of symbols in UI
+09/21/2024 11:59:51 AM Number of symbols in UI: 0
+09/21/2024 11:59:51 AM Screenshot saved: .\evidence\test_ui_symbol_count[test_data0]_092124_115951.png
+09/21/2024 11:59:53 AM Browser was closed successfully
+09/21/2024 11:59:58 AM ########## Test Case: test_compare_ui_count_with_test_data[test_data0] ##########
+09/21/2024 12:00:03 PM Opened Firefox Browser
+09/21/2024 12:00:05 PM Navigated to https://www.google.com/finance
+09/21/2024 12:00:05 PM Test started: Compare count of symbols in UI with test data
+09/21/2024 12:00:15 PM Screenshot saved: .\evidence\test_compare_ui_count_with_test_data[test_data0]_092124_120015.png
+09/21/2024 12:00:18 PM Browser was closed successfully

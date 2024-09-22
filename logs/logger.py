@@ -5,7 +5,8 @@ logging.basicConfig(
     encoding='utf-8',
     level=logging.INFO,
     format='%(asctime)s %(message)s',
-    datefmt='%m/%d/%Y %I:%M:%S %p'
+    datefmt='%m/%d/%Y %I:%M:%S %p',
+    force=True
 )
 
 logger = logging.getLogger()

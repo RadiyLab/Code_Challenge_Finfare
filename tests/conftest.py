@@ -17,8 +17,10 @@ def driver(request):
         'PYTEST_CURRENT_TEST').split(':')[-1].split(' ')[0]
     logger.info(f'########## Test Case: {test_name} ##########')
 
-    driver = webdriver.Firefox()
-    logger.info('Opened Firefox Browser')
+    # driver = webdriver.Firefox()
+    # logger.info('Opened Firefox Browser')
+    driver = webdriver.Chrome()
+    logger.info('Opened Chrome Browser')
 
     driver.get(config.URL)
     logger.info(f'Navigated to {config.URL}')

@@ -1,12 +1,13 @@
-name: Nightly Tests
+name: Scheduled Tests
 
 on:
   schedule:
-    - cron: '0 2 * * *'  
+   # This cron expression triggers at 6:00 AM UTC every day (2:00 AM EDT)
+    - cron: '0 6 * * *'
 
 jobs:
   run-tests:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
@@ -21,6 +22,6 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Run all tests
+      - name: Run tests
         run: |
-          pytest tests --disable-warnings
+          pytest -v --disable-warnings

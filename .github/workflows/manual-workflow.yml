@@ -13,7 +13,7 @@ on:
 
 jobs:
   run-tests:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
@@ -30,9 +30,9 @@ jobs:
 
       - name: Run tests
         run: |
-          if [ "${{ github.event.inputs.run_type }}" == "full" ]; then
-            pytest tests --disable-warnings
-          else
-            pytest tests/test_google_finance.py::ttest_print_symbols_not_in_ui
-            pytest tests/test_google_finance.py::testest_print_symbols_in_ui
-          fi
+          if ("${{ github.event.inputs.run_type }}" -eq "full") {
+            pytest -v --disable-warnings
+          } else {
+            pytest -m smoke --disable-warnings
+          }
+
